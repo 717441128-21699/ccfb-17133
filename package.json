@@ -1,0 +1,21 @@
+{
+  "name": "piying-subtitle-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "非遗皮影戏唱本录音自动对齐与双语字幕工坊",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "selftest": "esbuild scripts/selftest.ts --bundle --platform=node --format=esm --outfile=node_modules/.cache-selftest.mjs && node node_modules/.cache-selftest.mjs",
+    "check:browser": "node scripts/browser-check.mjs http://127.0.0.1:4190/",
+    "check:burn": "node scripts/browser-burn-check.mjs http://127.0.0.1:4190/"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "puppeteer-core": "^25.18.1",
+    "typescript": "~5.9.3",
+    "vite": "^6.4.6"
+  }
+}
